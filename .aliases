@@ -19,7 +19,6 @@ alias refz="source ~/.zshrc"
 alias llave="cat ~/.ssh/id_rsa.pub"
 alias vip="vi ~/.bash_profile"
 alias viz="vi ~/.zshrc"
-alias short="vi ~/.my_shortcuts"
 alias hd="ls -la | head"
 alias tl="ls -la | head"
 alias C="pwd | pbcopy"
@@ -48,6 +47,12 @@ alias pro="cd ~/Documents/Projects"
 alias prol="pro && ll"
 alias desk="cd ~/Desktop"
 alias yt="down && cd CodeVideos/Youtube"
+
+## Dotfiles
+alias dot="cd ~/Documents/Projects/dotfiles"
+alias va="vi ~/Documents/Projects/dotfiles/.aliases"
+alias dotv="dot && vs"
+alias dit="source ~/Documents/Projects/dotfiles/.init"
 
 ## Open
 alias oo="open ."
