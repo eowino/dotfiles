@@ -1,0 +1,139 @@
+# Scripts
+alias sp="start-project"
+
+## Utility commands ##
+alias ee="exit"
+alias up="uptime"
+alias cc="clear"
+alias his="history"
+alias ll="ls -la"
+alias lh="ls -ld .?*" #list hidden files
+alias lta="ls -lta" #sort by modification time
+alias order="lta"
+alias l="ls -la"
+alias llh="ls -lah"
+alias gp="ll | grep "
+alias egp="egrep"
+alias ref="source ~/.bash_profile"
+alias refz="source ~/.zshrc"
+alias llave="cat ~/.ssh/id_rsa.pub"
+alias vip="vi ~/.bash_profile"
+alias viz="vi ~/.zshrc"
+alias short="vi ~/.my_shortcuts"
+alias hd="ls -la | head"
+alias tl="ls -la | head"
+alias C="pwd | pbcopy"
+alias V="pbpaste"
+alias python-server="python -m SimpleHTTPServer"
+alias lad="ls -lad */" #list all dir's
+alias dir="ls -dlt */" #list dir's
+alias mem="du -hs ." #size of current directory
+alias hide="chflags hidden" #give folder directory"
+alias show="chflags nohidden"
+alias untar="tar xvf"
+alias comp="tar -zcvf" #(compress) e.g. comp filename.tar.gz file/s
+alias lsp="sudo lsof -i -n -P | grep LISTEN"
+alias count="ls -F |grep -v / | wc -l"
+
+## Navigation
+alias pp="pwd"
+alias bb="cd .."
+alias ..="cd .."
+alias ..l="cd .. && ll"
+alias trash="cd ~/.Trash"
+alias hdd="cd ~/Volumes" #navigate to external hard drives
+alias doc="cd ~/Documents"
+alias down="cd ~/Downloads"
+alias pro="cd ~/Documents/Projects"
+alias prol="pro && ll"
+alias desk="cd ~/Desktop"
+alias yt="down && cd CodeVideos/Youtube"
+
+## Open
+alias oo="open ."
+alias firefox="open -a firefox"
+alias chrome="open -a \"google chrome"\"
+alias chrome="open -a \"brave browser"\"
+alias safari="open -a safari"
+alias ote="open -e" #open with text edit
+alias vs="code"
+alias subl="sublime"
+
+## Git
+alias remote="git remote -v"
+alias gra="git remote add origin" # args: https://github.com/<username>/<project_title>.git
+alias gpom="git push origin master"
+alias gpog="git push origin gh-pages"
+alias gda="git add *"
+alias gcm="git commit"
+alias gcmm="git commit -m "
+alias gcmmd="git commit --no-edit" # default merge conflict message
+alias mm="gcmd"
+alias mmm="gcmd"
+alias gmu="git commit --amend" # amend previous commit message
+alias ugcmm="git reset HEAD~"
+alias gits="git status"
+alias ghpages="git checkout -b gh-pages"
+alias gitb="git branch"
+alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | pbcopy" # copy current branch name
+alias gitbr="gitb -a" # list remote branches
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias master="git checkout master"
+alias relb="git checkout release-branch"
+alias ghpush="ghpages && gpog"
+alias ghp="git checkout gh-pages"
+alias pullm="git pull origin master"
+alias pullg="git pull origin gh-pages"
+alias push="git push"
+alias pull="git pull"
+alias gdel="git branch -D"
+alias pggc="push && ggc"
+alias gdelr="git push origin --delete"
+alias update="master && pull && gco"
+alias uu="update"
+alias gres="git reset --hard"
+alias gmm="git merge master"
+alias did="git log --author=owino --no-merges"
+alias comfix="git commit --amend"
+alias glis="git show --pretty='' --name-only" #list files edited in commit given by hash
+
+## Node
+alias npmg="npm ls -g --depth 0" #List all npm modules installed globally
+alias npmgl="npmg"
+alias unpm="sudo npm i -g npm"
+alias nodebin="ls -la node_modules/.bin" #List local node executables
+alias ni="npm install"
+alias nit="npm init"
+alias nity="npm init -y"
+alias save="npm install --save"
+alias dev="npm install --save-dev"
+alias unsave="npm uninstall --save"
+alias undev="npm uninstall --save-dev"
+alias glo="npm install -g"
+alias hs="chrome http://127.0.0.1:8080 && http-server"
+alias lpkg="less package.json"
+alias vpkg="vi package.json"
+
+## Node scripts
+alias ns="npm start"
+alias nw="npm run watch"
+alias nd="npm run dev"
+
+## NVM
+alias nvmd="nvm use default"
+
+## Yarn
+alias ya="yarn add"
+alias yr="yarn remove"
+alias yi="yarn install"
+
+## Ruby Sass
+alias sass-watch="sass --watch main.scss:main.css"
+alias swa="sass --watch ." #sass watch all
+alias compress="sass --style compressed main.scss:main.css"
+
+## Heroku
+alias hul="heroku local"
+alias poku="git push heroku master"
+alias hlogs="heroku logs"
