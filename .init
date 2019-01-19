@@ -1,3 +1,5 @@
-source .exports
-source .aliases
-source .functions
+DIR="${HOME}/Documents/Projects/dotfiles/"
+
+source "${DIR}.exports"
+source "${DIR}.aliases"
+source "${DIR}.functions"
