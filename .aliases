@@ -47,11 +47,13 @@ alias pro="cd ~/Documents/Projects"
 alias prol="pro && ll"
 alias desk="cd ~/Desktop"
 alias yt="down && cd CodeVideos/Youtube"
+alias ytl="yt && youtube-dl"
 
 ## Dotfiles
 alias dot="cd ~/Documents/Projects/dotfiles"
 alias va="vi ~/Documents/Projects/dotfiles/.aliases"
-alias dotv="dot && vs"
+alias dota="less ~/Documents/Projects/dotfiles/.aliases"
+alias dotv="dot && vs ."
 alias dit="source ~/Documents/Projects/dotfiles/.init"
 
 ## Open
