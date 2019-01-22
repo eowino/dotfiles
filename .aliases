@@ -71,6 +71,7 @@ alias remote="git remote -v"
 alias gra="git remote add origin" # args: https://github.com/<username>/<project_title>.git
 alias gpom="git push origin master"
 alias gpog="git push origin gh-pages"
+alias gfp="git fetch && git pull"
 alias gda="git add *"
 alias gcm="git commit"
 alias gcmm="git commit -m "
