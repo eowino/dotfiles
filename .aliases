@@ -6,16 +6,18 @@ alias ee="exit"
 alias up="uptime"
 alias cc="clear"
 alias his="history"
-alias ll="ls -la"
+alias ll="ls -1a"
+alias l="ll"
+alias lll="ls -la"
 alias lh="ls -ld .?*" #list hidden files
 alias lta="ls -lta" #sort by modification time
 alias order="lta"
-alias l="ls -la"
 alias llh="ls -lah"
 alias gp="ll | grep "
 alias egp="egrep"
 alias ref="source ~/.bash_profile"
 alias refz="source ~/.zshrc"
+alias rrr="refz"
 alias llave="cat ~/.ssh/id_rsa.pub"
 alias vip="vi ~/.bash_profile"
 alias viz="vi ~/.zshrc"
@@ -33,6 +35,9 @@ alias untar="tar xvf"
 alias comp="tar -zcvf" #(compress) e.g. comp filename.tar.gz file/s
 alias lsp="sudo lsof -i -n -P | grep LISTEN"
 alias count="ls -F |grep -v / | wc -l"
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 
 ## Navigation
 alias pp="pwd"
@@ -124,6 +129,7 @@ alias vpkg="vi package.json"
 
 ## Node scripts
 alias ns="npm start"
+alias nt="npm test"
 alias nw="npm run watch"
 alias nd="npm run dev"
 
