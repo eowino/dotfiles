@@ -1,3 +1,6 @@
 search() { grep -R $1 ./ }
 mg() { mkdir "$@" && cd "$@" || exit; }
 mgn() { mkdir "$@" && cd "$@" && npm init -y || exit; }
+cdl() { cd "$@" && ll; }
+npm-latest() { npm info "$1" | grep latest; }
+npm-next() { npm info "$1" | grep next; }

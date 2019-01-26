@@ -37,6 +37,7 @@ alias lsp="sudo lsof -i -n -P | grep LISTEN"
 alias count="ls -F |grep -v / | wc -l"
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias delDSFiles="find . -name '.DS_Store' -type f -delete"
 
 
 ## Navigation
@@ -125,7 +126,10 @@ alias undev="npm uninstall --save-dev"
 alias glo="npm install -g"
 alias hs="chrome http://127.0.0.1:8080 && http-server"
 alias lpkg="less package.json"
-alias vpkg="vi package.json"
+alias pkg="vs package.json"
+alias npm-update="npx npm-check -u"
+alias rmn="rm -rf node_modules";
+alias flush-npm="rm -rf node_modules && npm i && say NPM is done";
 
 ## Node scripts
 alias ns="npm start"
