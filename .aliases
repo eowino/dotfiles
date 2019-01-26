@@ -73,6 +73,18 @@ alias ote="open -e" #open with text edit
 alias vs="code"
 alias subl="sublime"
 
+## Browser
+alias default-browser="chrome"
+alias react="default-browser https://reactjs.org/docs/getting-started.html"
+alias sand="default-browser https://codesandbox.io/s/new"
+alias foot="default-browser https://www.bbc.co.uk/sport/football"
+alias prem="default-browser https://www.bbc.co.uk/sport/football/premier-league"
+
+## Github
+alias ghb="default-browser https://github.com/eowino"
+alias github="ghb"
+alias ghbr="default-browser https://github.com/eowino?tab=repositories"
+
 ## Git
 alias remote="git remote -v"
 alias gra="git remote add origin" # args: https://github.com/<username>/<project_title>.git
