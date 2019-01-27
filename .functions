@@ -1,4 +1,4 @@
-search() { grep -R $1 ./ }
+search() { grep -Ri $1 ./ }
 mg() { mkdir "$@" && cd "$@" || exit; }
 mgn() { mkdir "$@" && cd "$@" && npm init -y || exit; }
 cdl() { cd "$@" && ll; }
