@@ -59,6 +59,7 @@ alias ytl="yt && youtube-dl"
 alias dot="cd ~/Documents/Projects/dotfiles"
 alias va="vi ~/Documents/Projects/dotfiles/.aliases"
 alias dota="less ~/Documents/Projects/dotfiles/.aliases"
+alias dotf="less ~/Documents/Projects/dotfiles/.functions"
 alias dotv="dot && vs ."
 alias dit="source ~/Documents/Projects/dotfiles/.init"
 
