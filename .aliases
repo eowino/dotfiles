@@ -108,6 +108,7 @@ alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | pbcopy" # copy current bra
 alias gitbr="gitb -a" # list remote branches
 alias gco="git checkout"
 alias gcob="git checkout -b"
+alias glast="git checkout -" # go to last branch you were on
 alias master="git checkout master"
 alias relb="git checkout release-branch"
 alias ghpush="ghpages && gpog"
