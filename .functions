@@ -4,3 +4,5 @@ mgn() { mkdir "$@" && cd "$@" && npm init -y || exit; }
 cdl() { cd "$@" && ll; }
 npm-latest() { npm info "$1" | grep latest; }
 npm-next() { npm info "$1" | grep next; }
+mdn() { default-browser "https://mdn.io/$@" }
+can() { default-browser "https://caniuse.com/#search=$@" }
