@@ -100,11 +100,12 @@ alias gcmmd="git commit --no-edit" # default merge conflict message
 alias mm="gcmmd"
 alias mmm="gcmmd"
 alias gmu="git commit --amend" # amend previous commit message
-alias ugcmm="git reset HEAD~"
+alias comfix="git commit --amend"
 alias gits="git status"
 alias ghpages="git checkout -b gh-pages"
 alias gitb="git branch"
 alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | pbcopy" # copy current branch name
+alias gcur="git rev-parse --abbrev-ref HEAD" # show current branch
 alias gitbr="gitb -a" # list remote branches
 alias gco="git checkout"
 alias gcob="git checkout -b"
@@ -121,14 +122,12 @@ alias push="git push"
 alias pull="git pull"
 alias gp="git pull"
 alias gdel="git branch -D"
-alias pggc="push && ggc"
 alias gdelr="git push origin --delete"
-alias update="master && pull && gco"
+alias update="master && gfp && gco"
 alias uu="update"
 alias gres="git reset --hard"
 alias gmm="git merge master"
 alias did="git log --author=owino --no-merges"
-alias comfix="git commit --amend"
 alias glis="git show --pretty='' --name-only" #list files edited in commit given by hash
 
 ## Node
@@ -156,6 +155,7 @@ alias ns="npm start"
 alias nt="npm test"
 alias nw="npm run watch"
 alias nd="npm run dev"
+alias nde="node --inpspect-brk"
 
 ## NVM
 alias nvmd="nvm use default"
