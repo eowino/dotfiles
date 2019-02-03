@@ -72,6 +72,7 @@ alias brave="open -a \"brave browser"\"
 alias safari="open -a safari"
 alias ote="open -e" #open with text edit
 alias vs="code"
+alias c="code ."
 alias subl="sublime"
 
 ## Browser
