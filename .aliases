@@ -158,7 +158,8 @@ alias ns="npm start"
 alias nt="npm test"
 alias nw="npm run watch"
 alias nd="npm run dev"
-alias nde="node --inpspect-brk"
+alias nde="node --inspect-brk"
+alias nbrk="nde"
 
 ## NVM
 alias nvmd="nvm use default"
