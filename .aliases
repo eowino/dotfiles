@@ -116,6 +116,7 @@ alias glast="git checkout -" # go to last branch you were on
 alias gitback="glast" # go to last branch you were on
 alias whichbranch="git branch --contains" # find branches a commit is on
 alias master="git checkout master"
+alias develop="git checkout develop"
 alias relb="git checkout release-branch"
 alias ghpush="ghpages && gpog"
 alias ghp="git checkout gh-pages"
@@ -158,7 +159,8 @@ alias ns="npm start"
 alias nt="npm test"
 alias nw="npm run watch"
 alias nd="npm run dev"
-alias nde="node --inpspect-brk"
+alias nde="node --inspect-brk"
+alias nbrk="nde"
 
 ## NVM
 alias nvmd="nvm use default"

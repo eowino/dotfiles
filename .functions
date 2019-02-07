@@ -7,5 +7,7 @@ npm-next() { npm info "$1" | grep next; }
 mdn() { default-browser "https://mdn.io/$@" }
 can() { default-browser "https://caniuse.com/#search=$@" }
 remote-update() { git remote set-url origin "git@github.com:eowino/$@.git" } # e.g. remote-update repo-name
+new-branch() { git checkout -b "$1/WEB-$2-$3" } # new branch TYPE ID DESCRIPTION
+new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
 git-create() { git create -o -d "$@" && git push -u origin master }
 git-create-private() { git create -p -o -d "$@" && git push -u origin master }
