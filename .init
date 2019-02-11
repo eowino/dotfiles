@@ -1,5 +1,6 @@
 DIR="${HOME}/Documents/Projects/dotfiles/"
 
+source "${DIR}.env"
 source "${DIR}.exports"
 source "${DIR}.aliases"
 source "${DIR}.functions"
