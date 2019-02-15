@@ -76,16 +76,15 @@ alias c="code ."
 alias subl="sublime"
 
 ## Browser
-alias default-browser="chrome"
-alias react="default-browser https://reactjs.org/docs/getting-started.html"
-alias sand="default-browser https://codesandbox.io/s/new"
-alias foot="default-browser https://www.bbc.co.uk/sport/football"
-alias prem="default-browser https://www.bbc.co.uk/sport/football/premier-league"
+alias react="$BROWSER https://reactjs.org/docs/getting-started.html"
+alias sand="$BROWSER https://codesandbox.io/s/new"
+alias foot="$BROWSER https://www.bbc.co.uk/sport/football"
+alias prem="$BROWSER https://www.bbc.co.uk/sport/football/premier-league"
 
 ## Github
-alias ghb="default-browser https://github.com/eowino"
+alias ghb="$BROWSER https://github.com/eowino"
 alias github="ghb"
-alias ghbr="default-browser https://github.com/eowino?tab=repositories"
+alias ghbr="$BROWSER https://github.com/eowino?tab=repositories"
 
 ## Git
 alias git="hub"
