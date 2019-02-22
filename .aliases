@@ -73,7 +73,7 @@ alias safari="open -a safari"
 alias ote="open -e" #open with text edit
 alias vs="code"
 alias c="code ."
-alias subl="sublime"
+alias ci="code-insiders ."
 
 ## Browser
 alias react="$BROWSER https://reactjs.org/docs/getting-started.html"
