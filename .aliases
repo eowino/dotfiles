@@ -73,9 +73,9 @@ alias safari="open -a safari"
 alias ote="open -e" #open with text edit
 alias vs="code"
 alias c="code ."
-alias subl="sublime"
 alias vi="vim"
 alias vimrc="vi ~/.vimrc"
+alias ci="code-insiders ."
 
 ## Browser
 alias react="$BROWSER https://reactjs.org/docs/getting-started.html"
@@ -149,6 +149,7 @@ alias dev="npm install --save-dev"
 alias unsave="npm uninstall --save"
 alias undev="npm uninstall --save-dev"
 alias glo="npm install -g"
+alias unglo="npm uninstall -g"
 alias hs="chrome http://127.0.0.1:8080 && http-server"
 alias lpkg="less package.json"
 alias pkg="vs package.json"
