@@ -11,7 +11,7 @@ syntax enable " Enable syntax highlighting
 set autoindent " New lines inherit the indentation of previous lines
 set expandtab " Convert tabs to spaces.
 set tabstop=4 " Indent using four spaces
-filetype indent on " load filetype-specific indent files
+filetype plugin indent on " load filetype-specific indent files
 
 " Search Options
 set hlsearch " Enable search highlighting
