@@ -1,6 +1,7 @@
 " vim-plug section 
 call plug#begin('~/.vim/plugged')
 Plug 'haishanh/night-owl.vim'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 set number " Show line numbers on the sidebar
