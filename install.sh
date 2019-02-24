@@ -18,7 +18,11 @@ nvm alias default --lts
 # Set .vimrc settings
 cp ./.vimrc ~/
 
+# Install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Configure vim colours
-mkdir ~/.vim/colors
+mkdir -p ~/.vim/colors
 curl -O https://raw.githubusercontent.com/flazz/vim-colorschemes/master/colors/cobalt2.vim
 mv cobalt2.vim ~/.vim/colors 
