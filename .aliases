@@ -110,6 +110,7 @@ alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | pbcopy" # copy current bra
 alias gitbcopy="cpgitb"
 alias copygitb="cpgitb"
 alias copybr="cpgitb"
+alias cpb="cpgitb"
 alias gcur="git rev-parse --abbrev-ref HEAD" # show current branch
 alias gitbr="gitb -a" # list remote branches
 alias gco="git checkout"
