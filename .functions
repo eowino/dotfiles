@@ -12,3 +12,7 @@ new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" 
 git-create() { git create -o -d "$@" && git push -u origin master }
 git-create-private() { git create -p -o -d "$@" && git push -u origin master }
 update-vimrc() { cp ~/Documents/Projects/dotfiles/.vimrc ~/ }
+pushup() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    git push --set-upstream origin $branchName
+}
