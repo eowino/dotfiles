@@ -71,6 +71,7 @@ alias chrome="open -a \"google chrome"\"
 alias abl="chrome http://about:blank"
 alias brave="open -a \"brave browser"\"
 alias safari="open -a safari"
+alias default_browser="chrome"
 alias ote="open -e" #open with text edit
 alias vs="code"
 alias c="code ."
@@ -79,15 +80,15 @@ alias vimrc="vi ~/.vimrc"
 alias ci="code-insiders ."
 
 ## Browser
-alias react="$BROWSER https://reactjs.org/docs/getting-started.html"
-alias sand="$BROWSER https://codesandbox.io/s/new"
-alias foot="$BROWSER https://www.bbc.co.uk/sport/football"
-alias prem="$BROWSER https://www.bbc.co.uk/sport/football/premier-league"
+alias react="$default_browser https://reactjs.org/docs/getting-started.html"
+alias sand="$default_browser https://codesandbox.io/s/new"
+alias foot="$default_browser https://www.bbc.co.uk/sport/football"
+alias prem="$default_browser https://www.bbc.co.uk/sport/football/premier-league"
 
 ## Github
-alias ghb="$BROWSER https://github.com/eowino"
+alias ghb="$default_browser https://github.com/eowino"
 alias github="ghb"
-alias ghbr="$BROWSER https://github.com/eowino?tab=repositories"
+alias ghbr="$default_browser https://github.com/eowino?tab=repositories"
 
 ## Git
 alias git="hub"
