@@ -16,3 +16,13 @@ pushup() {
     local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
     git push --set-upstream origin $branchName
 }
+delete-branches() {
+    for branch in $@; do
+        gdel $branch
+    done
+}
+delete-branches-remote() {
+    for branch in $@; do
+        gdelr $branch
+    done
+}
