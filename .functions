@@ -32,3 +32,9 @@ new-branch() {
         git checkout -b "$1/WEB-$2-$3"
     fi
 } 
+ytll() {
+    yt; # alias
+    for link in $@; do
+        youtube-dl $link
+    done
+}
