@@ -38,3 +38,10 @@ ytll() {
         youtube-dl $link
     done
 }
+delete-stashes() {
+    for stash_id in $@; do
+        git stash drop $stash_id
+    done
+    # show stash list for sanity check
+    git stash list
+}
