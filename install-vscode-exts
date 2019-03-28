@@ -3,6 +3,9 @@
 # Bulk install VSCode extensions
 # Currently this installs extensions to VSCode Insiders Edition from VSCode
 
+# N.B. Make sure you have added both code and code-insiders to your path
+# See https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NO_COLOR='\033[0m'
