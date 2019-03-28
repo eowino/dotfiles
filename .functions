@@ -45,3 +45,18 @@ delete-stashes() {
     # show stash list for sanity check
     git stash list
 }
+git-merge-last-branch() {
+    glast;
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    glast;
+    gm $branchName
+}
+gco-with-dev() {
+    # checkout branch with dev
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    gco ${branchName}"-with-develop"
+}
+gcob-with-dev() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    gcob ${branchName}"-with-develop"
+}
