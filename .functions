@@ -24,11 +24,18 @@ delete-branches-remote() {
         gdelr $branch
     done
 }
+delete-last-branch() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    master;
+    gdel $branchName
+}
 new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
 new-branch() { 
     if [ $# -eq 0 ]; then
         new-branch-h
     else
+        master;
+        gfp;
         git checkout -b "$1/WEB-$2-$3"
     fi
 } 
