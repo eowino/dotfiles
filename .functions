@@ -24,11 +24,18 @@ delete-branches-remote() {
         gdelr $branch
     done
 }
+delete-last-branch() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    master;
+    gdel $branchName
+}
 new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
 new-branch() { 
     if [ $# -eq 0 ]; then
         new-branch-h
     else
+        master;
+        gfp;
         git checkout -b "$1/WEB-$2-$3"
     fi
 } 
@@ -37,4 +44,26 @@ ytll() {
     for link in $@; do
         youtube-dl $link
     done
+}
+delete-stashes() {
+    for stash_id in $@; do
+        git stash drop $stash_id
+    done
+    # show stash list for sanity check
+    git stash list
+}
+git-merge-last-branch() {
+    glast;
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    glast;
+    gm $branchName
+}
+gco-with-dev() {
+    # checkout branch with dev
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    gco ${branchName}"-with-develop"
+}
+gcob-with-dev() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    gcob ${branchName}"-with-develop"
 }

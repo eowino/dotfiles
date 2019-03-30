@@ -139,6 +139,9 @@ alias gmd="gco develop && gfp && glast && git merge develop"
 alias did="git log --author=owino --no-merges"
 alias glis="git show --pretty='' --name-only" #list files edited in commit given by hash
 alias changed-files="glis"
+alias gsl="git stash list"
+alias gsa="git stash apply"
+alias gsp="git stash pop"
 
 ## Node
 alias npmg="npm ls -g --depth 0" #List all npm modules installed globally
