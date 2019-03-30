@@ -1,20 +1,41 @@
 #!/bin/bash
 
 # Bulk install VSCode extensions
-# Currently this installs extensions to VSCode Insiders Edition from VSCode
+
+# N.B. Make sure you have added 'code' to your path
+# See https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NO_COLOR='\033[0m'
 
-# Or replace exts with an array of your own extensions
-exts=$(code --list-extensions)
-count=$(echo $exts | tr " " "\n" | wc -l | tr -d '[:space:]')
+# Extensions
+exts=(
+    airship.airship-react-snippets
+    christian-kohler.npm-intellisense
+    christian-kohler.path-intellisense
+    CoenraadS.bracket-pair-colorizer
+    dbaeumer.vscode-eslint
+    eamodio.gitlens
+    eg2.vscode-npm-script
+    emmanuelbeziat.vscode-great-icons
+    esbenp.prettier-vscode
+    foxundermoon.shell-format
+    glen-84.sass-lint
+    joshpeng.sublime-babel-vscode
+    ms-vscode.vscode-typescript-tslint-plugin
+    naumovs.color-highlight
+    oderwat.indent-rainbow
+    sdras.night-owl
+    VisualStudioExptTeam.vscodeintellicode
+    wesbos.theme-cobalt2
+)
 
+count=${#exts[@]}
 echo -e "\nPreparing to install the following VSCode Extensions ($count):\n"
 
-for ext in $exts; do
-        echo -e "${BLUE}Installing:${GREEN} $ext"
-        code-insiders --install-extension $ext
-        echo "" # new line exec above
+for ext in "${exts[@]}"; do
+    echo -e "${BLUE}Installing:${GREEN} $ext"
+    code --install-extension $ext
+    echo "" # new line exec above
 done
