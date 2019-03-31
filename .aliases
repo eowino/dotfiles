@@ -10,7 +10,7 @@ alias ll="ls -1a"
 alias l="ll"
 alias lll="ls -la"
 alias lh="ls -ld .?*" #list hidden files
-alias lta="ls -lta" #sort by modification time
+alias lta="ls -lta"   #sort by modification time
 alias order="lta"
 alias llh="ls -lah"
 alias grp="ll | grep "
@@ -26,9 +26,9 @@ alias tl="ls -la | head"
 alias C="pwd | pbcopy"
 alias V="pbpaste"
 alias python-server="python -m SimpleHTTPServer"
-alias lad="ls -lad */" #list all dir's
-alias dir="ls -dlt */" #list dir's
-alias mem="du -hs ." #size of current directory
+alias lad="ls -lad */"      #list all dir's
+alias dir="ls -dlt */"      #list dir's
+alias mem="du -hs ."        #size of current directory
 alias hide="chflags hidden" #give folder directory"
 alias show="chflags nohidden"
 alias untar="tar xvf"
@@ -38,7 +38,6 @@ alias count="ls -F |grep -v / | wc -l"
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias delDSFiles="find . -name '.DS_Store' -type f -delete"
-
 
 ## Navigation
 alias pp="pwd"
@@ -114,11 +113,10 @@ alias copygitb="cpgitb"
 alias copybr="cpgitb"
 alias cpb="cpgitb"
 alias gcur="git rev-parse --abbrev-ref HEAD" # show current branch
-alias gitbr="gitb -a" # list remote branches
+alias gitbr="gitb -a"                        # list remote branches
 alias gco="git checkout"
 alias gcob="git checkout -b"
-alias glast="git checkout -" # go to last branch you were on
-alias gitback="glast" # go to last branch you were on
+alias glast="git checkout -"              # go to last branch you were on
 alias whichbranch="git branch --contains" # find branches a commit is on
 alias master="git checkout master"
 alias develop="git checkout develop"
@@ -142,6 +140,7 @@ alias changed-files="glis"
 alias gsl="git stash list"
 alias gsa="git stash apply"
 alias gsp="git stash pop"
+alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 
 ## Node
 alias npmg="npm ls -g --depth 0" #List all npm modules installed globally
@@ -161,8 +160,8 @@ alias hs="chrome http://127.0.0.1:8080 && http-server"
 alias lpkg="less package.json"
 alias pkg="vs package.json"
 alias npm-update="npx npm-check -u"
-alias rmn="rm -rf node_modules";
-alias flush-npm="rm -rf node_modules && npm i && say NPM is done";
+alias rmn="rm -rf node_modules"
+alias flush-npm="rm -rf node_modules && npm i && say NPM is done"
 
 ## Node scripts
 alias ns="npm start"
