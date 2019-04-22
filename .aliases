@@ -141,6 +141,7 @@ alias gsl="git stash list"
 alias gsa="git stash apply"
 alias gsp="git stash pop"
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+alias gbe="git browse"
 
 ## Node
 alias npmg="npm ls -g --depth 0" #List all npm modules installed globally
