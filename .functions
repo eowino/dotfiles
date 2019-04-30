@@ -29,6 +29,10 @@ delete-last-branch() {
     master;
     gdel $branchName
 }
+delete-current-branch-remote() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    gdelr $branchName
+}
 new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
 new-branch() { 
     if [ $# -eq 0 ]; then
