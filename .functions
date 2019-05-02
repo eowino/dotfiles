@@ -21,7 +21,7 @@ delete-branches() {
 }
 delete-branches-remote() {
     for branch in $@; do
-        gdelr $branch
+        delete_this_remote_branch $branch
     done
 }
 delete-last-branch() {
@@ -31,7 +31,7 @@ delete-last-branch() {
 }
 delete-current-branch-remote() {
     local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
-    gdelr $branchName
+    delete_this_remote_branch $branchName
 }
 new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
 new-branch() { 
