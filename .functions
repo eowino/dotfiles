@@ -24,7 +24,7 @@ delete-branches-remote() {
         delete_this_remote_branch $branch
     done
 }
-delete-last-branch() {
+delete-current-branch() {
     local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
     master;
     gdel $branchName
