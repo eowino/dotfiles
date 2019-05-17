@@ -42,6 +42,13 @@ new-branch() {
         gfp;
         git checkout -b "$1/WEB-$2-$3"
     fi
+}
+rename-branch() {
+    if [ $# -eq 0 ]; then
+        echo "rename-branch <new-branch-name-here>"
+    else
+        git branch -m "$1"
+    fi
 } 
 ytll() {
     yt; # alias
