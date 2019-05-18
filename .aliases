@@ -56,10 +56,12 @@ alias ytl="yt && youtube-dl"
 
 ## Dotfiles
 alias dot="cd ~/Documents/Projects/dotfiles"
-alias va="vi ~/Documents/Projects/dotfiles/.aliases"
+alias dotvi="vi ~/Documents/Projects/dotfiles/.aliases"
 alias dota="less ~/Documents/Projects/dotfiles/.aliases"
 alias dotp="less ~/Documents/Projects/dotfiles/.projects"
+alias dotpi="vi ~/Documents/Projects/dotfiles/.projects"
 alias dotf="less ~/Documents/Projects/dotfiles/.functions"
+alias dotfi="vi ~/Documents/Projects/dotfiles/.functions"
 alias dotv="dot && vs ."
 alias dit="source ~/Documents/Projects/dotfiles/.init"
 
@@ -136,6 +138,7 @@ alias undo-last-commit="git reset HEAD~"
 alias gmm="gco master && gfp && glast && git merge master"
 alias gmd="gco develop && gfp && glast && git merge develop"
 alias did="git log --author=owino --no-merges"
+alias log="git log"
 alias glis="git show --pretty='' --name-only" #list files edited in commit given by hash
 alias changed-files="glis"
 alias gsl="git stash list"
