@@ -119,6 +119,7 @@ alias gitbr="gitb -a"                        # list remote branches
 alias gco="git checkout"
 alias gcob="git checkout -b"
 alias glast="git checkout -"              # go to last branch you were on
+alias last-branch="git checkout -"         
 alias whichbranch="git branch --contains" # find branches a commit is on
 alias master="git checkout master"
 alias develop="git checkout develop"
