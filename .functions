@@ -85,3 +85,8 @@ gco-without-dev() {
     local branchName="$(echo $branchNameWithDev | cut -c 1-$nameWithoutPostfix)"
     gco $branchName
 }
+
+## Node.js
+node-version() { node -p "require('./package.json').version" }
+node-name() { node -p "require('./package.json').name" }
+node-scripts() { node -p "require('./package.json').scripts" }
