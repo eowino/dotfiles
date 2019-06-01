@@ -168,6 +168,7 @@ alias pkg="vs package.json"
 alias npm-update="npx npm-check -u"
 alias rmn="rm -rf node_modules"
 alias flush-npm="rm -rf node_modules && npm i && say NPM is done"
+alias link-start="npm link && npm start"
 
 ## Node scripts
 alias ns="npm start"
