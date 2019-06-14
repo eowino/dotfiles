@@ -33,6 +33,13 @@ delete-current-branch-remote() {
     local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
     delete_this_remote_branch $branchName
 }
+delete-remote-branch() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : delete-remote-branch <name-of-remote-branch-to-be-deleted>"
+    else
+        delete_this_remote_branch "$1"
+    fi
+}
 new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
 new-branch() { 
     if [ $# -eq 0 ]; then
