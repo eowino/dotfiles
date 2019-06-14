@@ -127,3 +127,5 @@ kill-process-in-port-force() {
 node-version() { node -p "require('./package.json').version" }
 node-name() { node -p "require('./package.json').name" }
 node-scripts() { node -p "require('./package.json').scripts" }
+node-deps() { node -p "require('./package.json').dependencies" }
+node-deps-dev() { node -p "require('./package.json').devDependencies" }
