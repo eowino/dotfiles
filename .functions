@@ -40,6 +40,21 @@ delete-remote-branch() {
         delete_this_remote_branch "$1"
     fi
 }
+delete-local-git-tag() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : delete-local-git-tag <name-of-tag>"
+    else
+        git tag -d "$1"
+    fi
+}
+delete-remote-git-tag() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : delete-remote-git-tag <name-of-tag>"
+    else
+        git push --delete origin "$1"
+
+    fi
+}
 new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
 new-branch() { 
     if [ $# -eq 0 ]; then
