@@ -2,8 +2,6 @@ search() { grep -Ri $1 ./ }
 mg() { mkdir "$@" && cd "$@" || exit; }
 mgn() { mkdir "$@" && cd "$@" && npm init -y || exit; }
 cdl() { cd "$@" && ll; }
-npm-latest() { npm info "$1" | grep latest; }
-npm-next() { npm info "$1" | grep next; }
 mdn() { default_browser "https://mdn.io/$@" }
 can() { default_browser "https://caniuse.com/#search=$@" }
 remote-update() { git remote set-url origin "git@github.com:eowino/$@.git" } # e.g. remote-update repo-name
@@ -144,3 +142,23 @@ node-name() { node -p "require('./package.json').name" }
 node-scripts() { node -p "require('./package.json').scripts" }
 node-deps() { node -p "require('./package.json').dependencies" }
 node-deps-dev() { node -p "require('./package.json').devDependencies" }
+
+## NPM
+npm-latest() { npm info "$1" | grep latest; }
+npm-next() { npm info "$1" | grep next; }
+save-exact() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : save-exact <package name> <version without @ symbol> i.e. save-exact react 16.8.6"
+    else
+        npm install "$1@$2" --save-exact
+    fi
+}
+
+## Yarn
+yarn-save-exact() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : yarn-save-exact <package name> <version without @ symbol> i.e. yarn-save-exact react 16.8.6"
+    else
+        yarn add "$1@$2" --exact
+    fi
+}
