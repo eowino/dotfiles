@@ -121,6 +121,14 @@ gco-without-dev() {
     local branchName="$(echo $branchNameWithDev | cut -c 1-$nameWithoutPostfix)"
     gco $branchName
 }
+add-file-to-last-commit() {
+   if [ $# -eq 0 ]; then
+        echo "Usage e.g. : add-file-to-last-commit <file-name-here>"
+    else
+        git add $1
+        git commit --amend --no-edit
+    fi
+}
 find-folder() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : find-folder <folder-name-here>"
