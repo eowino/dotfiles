@@ -121,6 +121,9 @@ gco-without-dev() {
     local branchName="$(echo $branchNameWithDev | cut -c 1-$nameWithoutPostfix)"
     gco $branchName
 }
+gco-with-dev-and-merge-last-branch-and-develop() {
+    gco-with-dev && git-merge-last-branch && gmd
+}
 add-file-to-last-commit() {
    if [ $# -eq 0 ]; then
         echo "Usage e.g. : add-file-to-last-commit <file-name-here>"
