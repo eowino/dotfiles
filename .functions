@@ -38,6 +38,13 @@ delete-remote-branch() {
         delete_this_remote_branch "$1"
     fi
 }
+gco-git-tag() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : gco-git-tag <git-tag-version>"
+    else
+        git checkout "$1"
+    fi
+}
 delete-local-git-tag() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : delete-local-git-tag <name-of-tag>"
