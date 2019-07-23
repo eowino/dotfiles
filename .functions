@@ -124,6 +124,9 @@ gco-without-dev() {
 gco-with-dev-and-merge-last-branch-and-develop() {
     gco-with-dev && git-merge-last-branch && gmd
 }
+gco-with-dev-and-merge-last-branch() {
+    gco-with-dev && git-merge-last-branch
+}
 add-file-to-last-commit() {
    if [ $# -eq 0 ]; then
         echo "Usage e.g. : add-file-to-last-commit <file-name-here>"
