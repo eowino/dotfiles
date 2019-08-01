@@ -99,6 +99,7 @@ alias ghbr="$default_browser https://github.com/eowino?tab=repositories"
 ## Git
 alias git="hub"
 alias remote="git remote -v"
+alias git-version="git describe --abbrev=0"
 alias gra="git remote add origin" # args: https://github.com/<username>/<project_title>.git
 alias gpom="git push origin master"
 alias gpog="git push origin gh-pages"
