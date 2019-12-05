@@ -120,7 +120,7 @@ alias comfix="git commit --amend"
 alias gits="git status"
 alias ghpages="git checkout -b gh-pages"
 alias gitb="git branch"
-alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | pbcopy" # copy current branch name
+alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | tr -d '[:space:]' | pbcopy" # copy current branch name
 alias gitbcopy="cpgitb"
 alias copygitb="cpgitb"
 alias copybr="cpgitb"
@@ -157,12 +157,13 @@ alias log="git log"
 alias glis="git show --pretty='' --name-only" #list files edited in commit given by hash
 alias changed-files="glis"
 alias gsl="git stash list"
-alias gsa="git stash apply"
-alias gsp="git stash pop"
-alias git-stash-show="show-stash-at-id"
+alias git-stash-apply="git stash apply"
+alias git-stash-pop="git stash pop"
+alias git-show-stash-at-id="show-stash-at-id"
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 alias gbe="git browse"
-alias gbr="gbe"
+alias git-stash-clear-all="git stash clear"
+alias git-stash-delete-id="git stash drop" # git-stash-delete-id 1
 
 ## Node
 alias npmg="npm ls -g --depth 0" #List all npm modules installed globally
