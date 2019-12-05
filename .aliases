@@ -85,6 +85,10 @@ alias vi="vim"
 alias vimrc="vi ~/.vimrc"
 alias ci="code-insiders ."
 
+## Alfred
+alias alfred-links="cd '/Users/$USER/Library/Application Support/Alfred 3/Alfred.alfredpreferences/preferences/features/websearch'"
+alias alfred-copy-links="alfred-links && cat prefs.plist | pbcopy"
+
 ## Browser
 alias react="$default_browser https://reactjs.org/docs/getting-started.html"
 alias sand="$default_browser https://codesandbox.io/s/new"
@@ -191,6 +195,7 @@ alias nc="npm run clean"
 alias nb="npm run build"
 alias nde="node --inspect-brk"
 alias nbrk="nde"
+alias rr="corre"
 
 ## NVM
 alias nvmd="nvm use default"
