@@ -86,8 +86,10 @@ alias vimrc="vi ~/.vimrc"
 alias ci="code-insiders ."
 
 ## Alfred
-alias alfred-links="cd '/Users/$USER/Library/Application Support/Alfred 3/Alfred.alfredpreferences/preferences/features/websearch'"
-alias alfred-copy-links="alfred-links && cat prefs.plist | pbcopy"
+alias alfred-preferences="cd '/Users/$USER/Library/Application Support/Alfred 3/Alfred.alfredpreferences/'"
+alias alfred-links-location="alfred-preferences && cd preferences/features/websearch"
+alias alfred-thumbnails-location="alfred-preferences && cd resources"
+alias alfred-copy-links="alfred-links-location && cat prefs.plist | pbcopy"
 
 ## Browser
 alias react="$default_browser https://reactjs.org/docs/getting-started.html"
