@@ -172,6 +172,13 @@ kill-process-in-port-force() {
         kill -9 $1
     fi
 }
+list-grep() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : list-grep <string-to-search>"
+    else
+        ll | grep "$1"
+    fi
+}
 
 ## Node.js
 node-version() { node -p "require('./package.json').version" }
