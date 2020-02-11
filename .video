@@ -5,3 +5,19 @@ ffprobe-framerate() {
         ffprobe -v error -select_streams v -of default=noprint_wrappers=1:nokey=1 -show_entries stream=r_frame_rate "$1";
     fi
 }
+
+ffprobe-info() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-info <path-to-video>"
+    else
+        ffprobe -show_format -skip_frame nokey -select_streams v:0 -show_entries frame=pkt_pts_time -show_entries stream -of csv=print_section=0 -print_format json -i "$1";
+    fi
+}
+
+ffprobe-frames() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-frames <path-to-video>"
+    else
+        ffprobe -show_format -skip_frame nokey -select_streams v:0 -show_entries frame -show_entries stream= -print_format json -i "$1";
+    fi
+}
