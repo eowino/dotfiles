@@ -198,6 +198,55 @@ save-exact() {
     fi
 }
 
+function node-dir-error() {
+    echo "package.json not found in $PWD"
+}
+
+function ni() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm install
+    else 
+        node-dir-error
+    fi
+}
+
+function save() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm install --save $1
+    else 
+        node-dir-error
+    fi
+}
+
+function save-dev() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm install --save-dev $1
+    else 
+        node-dir-error
+    fi
+}
+
+function unsave() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm uninstall --save $1
+    else 
+        node-dir-error
+    fi
+}
+
+function undev() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm uninstall --save-dev $1
+    else 
+        node-dir-error
+    fi
+}
+
 ## Yarn
 yarn-save-exact() {
     if [ $# -eq 0 ]; then
