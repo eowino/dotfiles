@@ -1,0 +1,6 @@
+FUNCTION_DIR="${HOME}/Documents/Projects/dotfiles/functions/"
+
+source "${FUNCTION_DIR}.general"
+source "${FUNCTION_DIR}.node"
+source "${FUNCTION_DIR}.git-fns"
+source "${FUNCTION_DIR}.yarn"

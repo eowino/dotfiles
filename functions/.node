@@ -1,0 +1,75 @@
+
+node-version() { node -p "require('./package.json').version" }
+
+node-name() { node -p "require('./package.json').name" }
+
+cp-node-name() { node-name | tr -d '\n' | pbcopy }
+
+node-scripts() { node -p "require('./package.json').scripts" }
+
+node-deps() { node -p "require('./package.json').dependencies" }
+
+node-deps-dev() { node -p "require('./package.json').devDependencies" }
+
+npm-latest() { npm info "$1" | grep latest; }
+
+npm-next() { npm info "$1" | grep next; }
+
+node-init() { mkdir "$@" && cd "$@" && npm init -y || exit; }
+
+save-exact() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : save-exact <package name> <version without @ symbol> i.e. save-exact react 16.8.6"
+    else
+        npm install "$1@$2" --save-exact
+    fi
+}
+
+function node-dir-error() {
+    echo "package.json not found in $PWD"
+}
+
+function ni() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm install
+    else 
+        node-dir-error
+    fi
+}
+
+function save() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm install --save $1
+    else 
+        node-dir-error
+    fi
+}
+
+function save-dev() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm install --save-dev $1
+    else 
+        node-dir-error
+    fi
+}
+
+function unsave() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm uninstall --save $1
+    else 
+        node-dir-error
+    fi
+}
+
+function undev() {
+    FILE="package.json"
+    if [ -f "$FILE" ]; then
+        npm uninstall --save-dev $1
+    else 
+        node-dir-error
+    fi
+}

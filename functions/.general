@@ -1,0 +1,56 @@
+mdn() { default_browser "https://mdn.io/$@" }
+
+can() { default_browser "https://caniuse.com/#search=$@" }
+
+cdl() { cd "$@" && ll; }
+
+search() { grep -Ri $1 ./ }
+
+find-folder() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : find-folder <folder-name-here>"
+    else
+        find . -type d -iname $1
+    fi
+}
+
+find-process-in-port() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : find-process-in-port <port-number>"
+    else
+        lsof -i tcp:$1
+    fi
+}
+
+kill-process-in-port() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : kill-process-in-port <port-number>"
+    else
+        # Using -15 rather than -9 to give the process a chance to cleanup after itself
+        # Otherwise it may leave corrupted files around which may affect itself on restart
+        kill -15 $1
+    fi
+}
+
+kill-process-in-port-force() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : kill-process-in-port-force <port-number>"
+    else
+        kill -9 $1
+    fi
+}
+
+list-grep() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : list-grep <string-to-search>"
+    else
+        ll | grep "$1"
+    fi
+}
+
+ytll() {
+    yt; # alias
+    for link in $@; do
+        youtube-dl $link
+    done
+}

@@ -1,0 +1,147 @@
+pushup() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    git push --set-upstream origin $branchName
+}
+
+delete-branches() {
+    for branch in $@; do
+        gdel $branch
+    done
+}
+
+delete-branches-remote() {
+    for branch in $@; do
+        delete_this_remote_branch $branch
+    done
+}
+
+delete-current-branch() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    master;
+    gdel $branchName
+}
+
+delete-current-branch-remote() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    delete_this_remote_branch $branchName
+}
+
+delete-remote-branch() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : delete-remote-branch <name-of-remote-branch-to-be-deleted>"
+    else
+        delete_this_remote_branch "$1"
+    fi
+}
+
+gco-git-tag() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : gco-git-tag <git-tag-version>"
+    else
+        git checkout "$1"
+    fi
+}
+
+delete-local-git-tag() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : delete-local-git-tag <name-of-tag>"
+    else
+        git tag -d "$1"
+    fi
+}
+
+delete-remote-git-tag() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : delete-remote-git-tag <name-of-tag>"
+    else
+        git push --delete origin "$1"
+
+    fi
+}
+
+new-branch-h() { echo "Usage e.g. : new-branch fix 101 branch-description-here" } # new branch TYPE ID DESCRIPTION
+new-branch() { 
+    if [ $# -eq 0 ]; then
+        new-branch-h
+    else
+        master;
+        gfp;
+        git checkout -b "$1/WEB-$2-$3"
+    fi
+}
+
+new-branch-from-branch() { 
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : new-branch-from-branch <base-branch> <new-branch-name>"
+    else
+        gco "$1";
+        gfp;
+        git checkout -b "$2"
+    fi
+}
+
+rename-branch() {
+    if [ $# -eq 0 ]; then
+        echo "rename-branch <new-branch-name-here>"
+    else
+        git branch -m "$1"
+    fi
+}
+
+show-stash-at-id() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : show-stash-at-id <stash-ID-here>"
+    else
+        git stash show -p stash@{$1}
+    fi
+}
+
+delete-stashes() {
+    for stash_id in $@; do
+        git stash drop $stash_id
+    done
+    # show stash list for sanity check
+    git stash list
+}
+
+git-merge-last-branch() {
+    glast;
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    glast;
+    gm $branchName
+}
+
+gco-with-dev() {
+    # checkout branch with dev
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    gco ${branchName}"-with-develop"
+}
+
+gcob-with-dev() {
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    gcob ${branchName}"-with-develop"
+}
+
+gco-without-dev() {
+    local branchNameWithDev="$(git branch | grep \* | cut -d ' ' -f2)"
+    local postfix="-with-develop"
+    local nameWithoutPostfix=$(( ${#branchNameWithDev} - ${#postfix} ))
+    local branchName="$(echo $branchNameWithDev | cut -c 1-$nameWithoutPostfix)"
+    gco $branchName
+}
+gco-with-dev-and-merge-last-branch-and-develop() {
+    gco-with-dev && git-merge-last-branch && gmd
+}
+
+gco-with-dev-and-merge-last-branch() {
+    gco-with-dev && git-merge-last-branch
+}
+
+add-file-to-last-commit() {
+   if [ $# -eq 0 ]; then
+        echo "Usage e.g. : add-file-to-last-commit <file-name-here>"
+    else
+        git add $1
+        git commit --amend --no-edit
+    fi
+}
