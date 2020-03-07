@@ -145,3 +145,12 @@ add-file-to-last-commit() {
         git commit --amend --no-edit
     fi
 }
+
+gitpr() {
+    # e.g. https://github.com/eowino/dotfiles/compare/feature-branch
+    local remote="https://github.com"
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
+    local repoName="$(basename $(git remote get-url origin) .git)"
+    local owner="$(git config --get remote.origin.url | tr ":" " " | cut -d ' ' -f2 | tr "/" " " | cut -d ' ' -f1)"
+    open "$remote/$owner/$repoName/compare/$branchName"
+}
