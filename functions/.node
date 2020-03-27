@@ -47,7 +47,7 @@ function save() {
     fi
 }
 
-function save-dev() {
+function dev() {
     FILE="package.json"
     if [ -f "$FILE" ]; then
         npm install --save-dev $1
