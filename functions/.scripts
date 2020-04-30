@@ -1,1 +1,4 @@
 DIR="${HOME}/Documents/Projects/dotfiles/scripts"
+
+alias jira="node $DIR/jira.js"
+alias ts-interface="node $DIR/typescript-interface.js"
