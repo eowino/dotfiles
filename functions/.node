@@ -41,7 +41,7 @@ function ni() {
 function save() {
     FILE="package.json"
     if [ -f "$FILE" ]; then
-        npm install --save $1
+        npm install --save $@
     else 
         node-dir-error
     fi
@@ -50,7 +50,7 @@ function save() {
 function dev() {
     FILE="package.json"
     if [ -f "$FILE" ]; then
-        npm install --save-dev $1
+        npm install --save-dev $@
     else 
         node-dir-error
     fi
@@ -59,7 +59,7 @@ function dev() {
 function unsave() {
     FILE="package.json"
     if [ -f "$FILE" ]; then
-        npm uninstall --save $1
+        npm uninstall --save $@
     else 
         node-dir-error
     fi
@@ -68,7 +68,7 @@ function unsave() {
 function undev() {
     FILE="package.json"
     if [ -f "$FILE" ]; then
-        npm uninstall --save-dev $1
+        npm uninstall --save-dev $@
     else 
         node-dir-error
     fi
