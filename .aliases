@@ -69,7 +69,7 @@ alias dotpi="vi ~/Documents/Projects/dotfiles/.projects"
 alias dotf="less ~/Documents/Projects/dotfiles/.functions"
 alias dotfi="vi ~/Documents/Projects/dotfiles/.functions"
 alias dotv="dot && vs ."
-alias dit="source ~/Documents/Projects/dotfiles/.init"
+alias dit="source ~/.zshrc"
 
 ## Open
 alias oo="open ."
@@ -187,7 +187,7 @@ alias rmn="rm -rf node_modules"
 alias flush-npm="rm -rf node_modules && npm i && say NPM is done"
 alias link-start="npm link && npm start"
 alias npm-list-linked-projects="npm ls -g --depth=0 --link=true"
-alias serve="http-server -g -c-1"
+alias serve="http-server -g -c-1 --cors"
 
 ## Node scripts
 alias ns="npm start"
