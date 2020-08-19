@@ -69,7 +69,7 @@ alias dotpi="vi ~/Documents/Projects/dotfiles/.projects"
 alias dotf="less ~/Documents/Projects/dotfiles/.functions"
 alias dotfi="vi ~/Documents/Projects/dotfiles/.functions"
 alias dotv="dot && vs ."
-alias dit="source ~/.zshrc"
+alias init="source ~/.zshrc"
 
 ## Open
 alias oo="open ."
