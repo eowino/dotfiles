@@ -66,7 +66,7 @@ new-branch() {
     else
         master;
         gfp;
-        git checkout -b "$1/WEB-$2-$3"
+        git checkout -b "$1/DORIS-$2-$3"
     fi
 }
 
