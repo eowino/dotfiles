@@ -21,3 +21,12 @@ ffprobe-frames() {
         ffprobe -show_format -skip_frame nokey -select_streams v:0 -show_entries frame -show_entries stream= -print_format json -i "$1";
     fi
 }
+
+ffprobe-continuous-pts() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-keyframes <path-to-video> (confirm cont"
+    else
+        ffprobe -select_streams v:0 -loglevel error -skip_frame nokey -show_entries frame=pkt_pts_time -of csv=print_section=0 -i "$1"
+    fi
+
+}
