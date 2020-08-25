@@ -96,8 +96,7 @@ alias alfred-copy-links="alfred-links-location && cat prefs.plist | pbcopy"
 ## Browser
 alias react="$default_browser https://reactjs.org/docs/getting-started.html"
 alias sand="$default_browser https://codesandbox.io/s/new"
-alias foot="$default_browser https://www.bbc.co.uk/sport/football"
-alias prem="$default_browser https://www.bbc.co.uk/sport/football/premier-league"
+
 
 ## Github
 alias ghb="$default_browser https://github.com/eowino"
@@ -177,6 +176,7 @@ alias unpm="sudo npm i -g npm"
 alias nodebin="ls -la node_modules/.bin" #List local node executables
 alias nit="npm init"
 alias nity="npm init -y"
+alias nu="npm-uninstall"
 alias glo="npm install -g"
 alias unglo="npm uninstall -g"
 alias hs="chrome http://127.0.0.1:8080 && http-server"
