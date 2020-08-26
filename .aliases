@@ -86,6 +86,8 @@ alias vi="vim"
 alias vimrc="vi ~/.vimrc"
 alias ci="code-insiders ."
 alias cir="code-insiders -r ."
+alias cr="code -r ."
+
 
 ## Alfred
 alias alfred-preferences="cd '/Users/$USER/Library/Application Support/Alfred 3/Alfred.alfredpreferences/'"
