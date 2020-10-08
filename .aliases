@@ -9,6 +9,7 @@ alias pd="popd"
 alias his="history"
 alias ll="ls -1a"
 alias l="ll"
+alias k="l"
 alias lll="ls -la"
 alias lh="ls -ld .?*" #list hidden files
 alias list-hidden-files="lh"
