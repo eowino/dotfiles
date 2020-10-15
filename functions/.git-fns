@@ -154,3 +154,11 @@ gitpr() {
     local owner="$(git config --get remote.origin.url | tr ":" " " | cut -d ' ' -f2 | tr "/" " " | cut -d ' ' -f1)"
     open "$remote/$owner/$repoName/compare/$branchName"
 }
+
+pulls() {
+    # e.g. https://github.com/eowino/dotfiles/pulls
+    local remote="https://github.com"
+    local repoName="$(basename $(git remote get-url origin) .git)"
+    local owner="$(git config --get remote.origin.url | tr ":" " " | cut -d ' ' -f2 | tr "/" " " | cut -d ' ' -f1)"
+    open "$remote/$owner/$repoName/pulls"
+}
