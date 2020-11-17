@@ -1,5 +1,5 @@
 
-node-version() { node -p "require('./package.json').version" }
+pkg-version() { node -p "require('./package.json').version" }
 
 node-name() { node -p "require('./package.json').name" }
 
