@@ -71,6 +71,7 @@ alias dotf="less ~/Documents/Projects/dotfiles/.functions"
 alias dotfi="vi ~/Documents/Projects/dotfiles/.functions"
 alias dotv="dot && vs ."
 alias init="source ~/.zshrc"
+alias dit="source ~/.zshrc"
 
 ## Open
 alias oo="open ."
@@ -164,9 +165,9 @@ alias log="git log"
 alias glis="git show --pretty='' --name-only" #list files edited in commit given by hash
 alias changed-files="glis"
 alias git-stash-list="git stash list"
+alias gsl="git stash list"
 alias git-stash-apply="git stash apply"
 alias git-stash-pop="git stash pop"
-alias git-show-stash-at-id="show-stash-at-id"
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 alias gbe="git browse"
 alias git-stash-clear-all="git stash clear"

@@ -88,9 +88,9 @@ rename-branch() {
     fi
 }
 
-show-stash-at-id() {
+git-stash-show-id() {
     if [ $# -eq 0 ]; then
-        echo "Usage e.g. : show-stash-at-id <stash-ID-here>"
+        echo "Usage e.g. : git-stash-show-id <stash-ID-here>"
     else
         git stash show -p stash@{$1}
     fi
