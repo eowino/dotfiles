@@ -203,6 +203,7 @@ alias nb="npm run build"
 alias nde="node --inspect-brk"
 alias nbrk="nde"
 alias rr="corre"
+alias pkg="pkg-version"
 
 ## NVM
 alias nvmd="nvm use default"
