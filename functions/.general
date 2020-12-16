@@ -54,3 +54,11 @@ ytll() {
         youtube-dl $link
     done
 }
+
+ngrok() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ngrok <port-number>"
+    else
+        ~/ngrok http $1
+    fi
+}
