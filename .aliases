@@ -51,7 +51,7 @@ alias bb="cd .."
 alias ..="cd .."
 alias ..l="cd .. && ll"
 alias trash-dir="cd ~/.Trash"
-alias del="trash"        # node module
+alias del="trash"        # node module trash-cli
 alias hdd="cd ~/Volumes" #navigate to external hard drives
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
@@ -90,7 +90,6 @@ alias ci="code-insiders ."
 alias cir="code-insiders -r ."
 alias cr="code -r ."
 
-
 ## Alfred
 alias alfred-preferences="cd '/Users/$USER/Library/Application Support/Alfred 3/Alfred.alfredpreferences/'"
 alias alfred-links-location="alfred-preferences && cd preferences/features/websearch"
@@ -100,7 +99,6 @@ alias alfred-copy-links="alfred-links-location && cat prefs.plist | pbcopy"
 ## Browser
 alias react="$default_browser https://reactjs.org/docs/getting-started.html"
 alias sand="$default_browser https://codesandbox.io/s/new"
-
 
 ## Github
 alias ghb="$default_browser https://github.com/eowino"
