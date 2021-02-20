@@ -221,3 +221,7 @@ alias compress="sass --style compressed main.scss:main.css"
 alias hul="heroku local"
 alias poku="git push heroku master"
 alias hlogs="heroku logs"
+
+## AWS CLI
+alias awscli-list-profiles="aws configure list-profiles"
+alias awscli-version="aws --version"

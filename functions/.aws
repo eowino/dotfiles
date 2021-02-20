@@ -1,0 +1,7 @@
+awscli-use-profile() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : aws-use-profile <profile-name>"
+    else
+        export AWS_PROFILE=$1
+    fi
+}
