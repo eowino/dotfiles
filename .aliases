@@ -48,8 +48,9 @@ alias delDSFiles="find . -name '.DS_Store' -type f -delete"
 ## Navigation
 alias pp="pwd"
 alias bb="cd .."
-alias ..="cd .."
-alias ..l="cd .. && ll"
+alias b="bb"
+alias ..="bb"
+alias ..l="bb && ll"
 alias trash-dir="cd ~/.Trash"
 alias del="trash"        # node module trash-cli
 alias hdd="cd ~/Volumes" #navigate to external hard drives
