@@ -137,13 +137,21 @@ gco-with-dev-and-merge-last-branch() {
     gco-with-dev && git-merge-last-branch
 }
 
-add-file-to-last-commit() {
+git-add-file-to-last-commit() {
    if [ $# -eq 0 ]; then
         echo "Usage e.g. : add-file-to-last-commit <file-name-here>"
     else
         git add $1
         git commit --amend --no-edit
     fi
+}
+
+git-amend-previous-message() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : git-amend-previous-message <new-commit-message-here>"
+    else
+        git commit --amend -m "$1"
+    fi 
 }
 
 gitpr() {
