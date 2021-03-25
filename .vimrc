@@ -19,11 +19,9 @@ set incsearch " search as characters are entered
 set ignorecase " Ignore case when searching.
 set smartcase " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 
-" Theme Color
-colorscheme cobalt2
-" colorscheme night-owl
-
 " UI Options
+colorscheme cobalt2 " Change color scheme
+" colorscheme night-owl
 set laststatus=2 " Always display the status bar.
 set ruler " Always show cursor position.
 set cursorline " Highlight the line currently under cursor.
