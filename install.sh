@@ -14,9 +14,6 @@ curl -o- https://raw.gcp ithubusercontent.com/creationix/nvm/v0.34.0/install.sh 
 nvm install --lts
 nvm alias default --lts
 
-# Set .vimrc settings
-cp ./.vimrc ~/
-
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
