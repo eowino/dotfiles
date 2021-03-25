@@ -223,3 +223,6 @@ alias hlogs="heroku logs"
 ## AWS CLI
 alias awscli-list-profiles="aws configure list-profiles"
 alias awscli-version="aws --version"
+
+## Brew
+alias brew-generate-brewfile="brew bundle dump --describe"

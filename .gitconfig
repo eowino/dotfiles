@@ -1,0 +1,9 @@
+[core]
+	excludesfile = /Users/evansowino/.gitignore_global
+[user]
+	email = 9787512+eowino@users.noreply.github.com
+	name = Evans Owino
+[interactive]
+    diffFilter = delta --color-only
+[color]
+	ui = true
