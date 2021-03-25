@@ -24,7 +24,7 @@ ln -s ~/Documents/Projects/dotfiles/.zshrc ~/.zshrc
 ln -s ~/Documents/Projects/dotfiles/.gitconfig ~/.gitconfig
 ```
 
-4. Install software
+4. Install software.
 
 ```zsh
 ./install
