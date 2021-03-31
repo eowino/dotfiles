@@ -73,3 +73,7 @@ function undev() {
         node-dir-error
     fi
 }
+
+npm-install-globals() {
+    npm install -g trash-cli corre yalc version-cli
+}
