@@ -228,3 +228,7 @@ alias awscli-version="aws --version"
 
 ## Brew
 alias brew-generate-brewfile="brew bundle dump --describe"
+
+## tmux
+alias tmux-list="tmux ls"
+alias tmux-attach-to-last-session="tmux attach-session"
