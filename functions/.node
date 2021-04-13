@@ -77,3 +77,11 @@ function undev() {
 npm-install-globals() {
     npm install -g trash-cli corre yalc version-cli
 }
+
+search-node-modules() {
+     if [ $# -eq 0 ]; then
+        echo "Usage e.g. : search-node-modules <node-package-name>"
+    else
+        tree -d -L 1 "node_modules/$1"
+    fi
+}
