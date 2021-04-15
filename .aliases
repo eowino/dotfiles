@@ -174,7 +174,7 @@ alias git-stash-delete-id="git stash drop" # git-stash-delete-id 1
 
 ## Node
 alias npmg="npm ls -g --depth 0" #List all npm modules installed globally
-alias npmgl="npmg"
+alias npm-list-global-installs="npmg"
 alias unpm="sudo npm i -g npm"
 alias nodebin="ls -la node_modules/.bin" #List local node executables
 alias nit="npm init"
