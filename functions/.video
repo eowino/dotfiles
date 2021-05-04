@@ -28,5 +28,12 @@ ffprobe-continuous-pts() {
     else
         ffprobe -select_streams v:0 -loglevel error -skip_frame nokey -show_entries frame=pkt_pts_time -of csv=print_section=0 -i "$1"
     fi
+}
 
+ffmpeg-mov-to-mp4() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffmpeg-mov-to-mp4 <file name>"
+    else
+        ffmpeg -i "$1.mov" -vcodec h264 -acodec aac "$1.mp4"
+    fi
 }
