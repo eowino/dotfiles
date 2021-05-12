@@ -13,3 +13,11 @@ tmux-kill-session() {
         tmux kill-session -t "$1"
     fi
 }
+
+tmux-attach-session() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : tmux-attach-session <session-name>"
+    else
+        tmux attach -t "$1"
+    fi
+}
