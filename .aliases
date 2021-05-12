@@ -125,10 +125,6 @@ alias gits="git status"
 alias ghpages="git checkout -b gh-pages"
 alias gitb="git branch"
 alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | tr -d '[:space:]' | pbcopy" # copy current branch name
-alias gitbcopy="cpgitb"
-alias copygitb="cpgitb"
-alias copybr="cpgitb"
-alias cpb="cpgitb"
 alias gcur="git rev-parse --abbrev-ref HEAD" # show current branch
 alias gitbr="gitb -a"                        # list remote branches
 alias gco="git checkout"
@@ -171,6 +167,7 @@ alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 alias gbe="git browse"
 alias git-stash-clear-all="git stash clear"
 alias git-stash-delete-id="git stash drop" # git-stash-delete-id 1
+alias git-stop-tracking-remote-branch="git branch --unset-upstream"
 
 ## Node
 alias npmg="npm ls -g --depth 0" #List all npm modules installed globally

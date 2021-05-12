@@ -170,3 +170,8 @@ pulls() {
     local owner="$(git config --get remote.origin.url | tr ":" " " | cut -d ' ' -f2 | tr "/" " " | cut -d ' ' -f1)"
     open "$remote/$owner/$repoName/pulls"
 }
+
+git-show-remote-branch() {
+    local currentBranch="$(git branch | grep \* | cut -d ' ' -f2 | tr -d '[:space:]')"
+    git remote show origin | grep "$currentBranch"
+}
