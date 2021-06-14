@@ -75,7 +75,7 @@ function undev() {
 }
 
 npm-install-globals() {
-    npm install -g trash-cli corre yalc version-cli
+    npm install -g yalc version-cli trash-cli release-automation http-server corre
 }
 
 search-node-modules() {
