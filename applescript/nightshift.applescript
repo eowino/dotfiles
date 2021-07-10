@@ -10,6 +10,4 @@ tell application "System Events"
 	end tell
 end tell
 
-tell application "System Preferences"
-	quit
-end tell
+tell application "System Preferences" to quit
