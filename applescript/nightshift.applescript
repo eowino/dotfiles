@@ -1,3 +1,5 @@
+-- Toggles Night Shift
+
 tell application "System Preferences"
 	activate
 	reveal anchor "displaysNightShiftTab" of pane id "com.apple.preference.displays"
