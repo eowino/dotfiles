@@ -34,7 +34,8 @@ alias python-server="python -m SimpleHTTPServer"
 alias lad="ls -lad */" #list all dir's
 alias list-directories="lad"
 alias dir="ls -dlt */"      #list dir's
-alias mem="du -hs ."        #size of current directory
+alias memory="du -hs ."        #size of current directory
+alias disk-usage="du -h --max-depth=1"
 alias hide="chflags hidden" #give folder directory"
 alias show="chflags nohidden"
 alias untar="tar xvf"
