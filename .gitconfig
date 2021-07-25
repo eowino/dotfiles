@@ -7,3 +7,5 @@
     diffFilter = delta --color-only
 [color]
 	ui = true
+[pull]
+	rebase = false
