@@ -1,5 +1,6 @@
 # Scripts
 alias sp="start-project"
+alias rr="corre"
 
 ## Utility commands ##
 alias ee="exit"
