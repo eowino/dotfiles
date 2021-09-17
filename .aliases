@@ -127,6 +127,7 @@ alias gits="git status"
 alias ghpages="git checkout -b gh-pages"
 alias gitb="git branch"
 alias cpgitb="git branch | grep \* | cut -d ' ' -f2 | tr -d '[:space:]' | pbcopy" # copy current branch name
+alias cpg="cpgitb"
 alias gcur="git rev-parse --abbrev-ref HEAD" # show current branch
 alias gitbr="gitb -a"                        # list remote branches
 alias gco="git checkout"
