@@ -37,3 +37,11 @@ ffmpeg-mov-to-mp4() {
         ffmpeg -i "$1.mov" -vcodec h264 -acodec aac "$1.mp4"
     fi
 }
+
+ffmpeg-extract-captions() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffmpeg-extract-captions <file name>"
+    else
+        ffmpeg -f lavfi -i "movie=$1[out+subcc]"  -map 0:1  $1.vtt
+    fi
+}
