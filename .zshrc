@@ -12,6 +12,7 @@ ZSH_THEME="bullet-train"
 # my bullet-train config
 BULLETTRAIN_PROMPT_CHAR="£"
 BULLETTRAIN_PROMPT_ORDER=(
+  time
   git
   dir
   nvm
