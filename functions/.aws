@@ -10,6 +10,6 @@ aws-ecs-task-count() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : aws-ecs-task-count <name of ECS cluster>"
     else
-        aws ecs describe-clusters --cluster $1 | grep runningTasksCount
+        aws ecs describe-clusters --cluster $1 | grep runningTasksCount | xargs
     fi
 }
