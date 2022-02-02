@@ -6,6 +6,14 @@ cdl() { cd "$@" && ll; }
 
 search() { grep -Ri $1 ./ }
 
+create-folder() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : create-folder <folder-name-here>"
+    else
+        mkdir $1 && $_
+    fi
+}
+
 find-folder() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : find-folder <folder-name-here>"
