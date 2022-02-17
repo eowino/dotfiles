@@ -14,6 +14,14 @@ ffprobe-info() {
     fi
 }
 
+ffprobe-audio-info() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-audio-info <path-to-audio>"
+    else
+        ffprobe -loglevel 0 -print_format json -show_format -show_streams "$1";
+    fi
+}
+
 ffprobe-frames() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : ffprobe-frames <path-to-video>"
