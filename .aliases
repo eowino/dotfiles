@@ -89,11 +89,11 @@ alias default_browser="chrome"
 alias ote="open -e" #open with text edit
 alias vs="code"
 alias c="code ."
+alias ci="code-insiders ."
+alias cr="code -r ."
+alias cir="code-insiders -r ."
 alias vi="vim"
 alias vimrc="vi ~/.vimrc"
-alias ci="code-insiders ."
-alias cir="code-insiders -r ."
-alias cr="code -r ."
 
 ## Alfred
 alias alfred-preferences="cd '/Users/$USER/Library/Application Support/Alfred 3/Alfred.alfredpreferences/'"
