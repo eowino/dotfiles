@@ -194,6 +194,7 @@ alias link-start="npm link && npm start"
 alias npm-list-linked-projects="npm ls -g --depth=0 --link=true"
 alias serve="http-server -g -c-1 --cors"
 alias flush-npm-and-package-lock="trash node_modules && rm package-lock.json && ni && say NPM is done"
+alias nuke-npmrc="echo '' > .npmrc"
 
 ## Node scripts
 alias ns="npm start"
