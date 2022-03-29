@@ -208,6 +208,7 @@ alias nde="node --inspect-brk"
 alias nbrk="nde"
 alias rr="corre"
 alias pkg="pkg-version"
+alias cy="npm run cy:open"
 
 ## NVM
 alias nvmd="nvm use default"
