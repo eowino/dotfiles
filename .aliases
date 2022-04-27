@@ -123,9 +123,8 @@ alias gfp="git fetch && git pull"
 alias gda="git add *"
 alias gcm="git commit"
 alias gcmm="git commit -m "
-alias gcmmd="git commit --no-edit" # default merge conflict message
-alias git-commit-no-edit="gcmmd"
-alias gmu="git commit --amend" # amend previous commit message
+alias git-commit-no-edit="git commit --no-edit" # default merge conflict message
+alias git-copy-previous-message="git log -1 --pretty=format:%B | pbcopy"
 alias gits="git status"
 alias ghpages="git checkout -b gh-pages"
 alias gitb="git branch"
