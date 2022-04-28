@@ -85,3 +85,13 @@ search-node-modules() {
         tree -d -L 1 "node_modules/$1"
     fi
 }
+
+pulls() {
+    node -p "
+        const execSync = require('child_process').execSync;
+        const [remote] = execSync('git remote -v').toString().split('\n');
+        const [, repo] = /:(.*)(?=.git)/g.exec(remote);
+        const url = 'https://github.com/' + repo + '/pulls';
+        execSync('open ' + url);
+    "
+}
