@@ -93,5 +93,6 @@ pulls() {
         const [, repo] = /:(.*)(?=.git)/g.exec(remote);
         const url = 'https://github.com/' + repo + '/pulls';
         execSync('open ' + url);
+        console.log(url);
     "
 }
