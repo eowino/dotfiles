@@ -48,6 +48,7 @@ alias count="ls -F |grep -v / | wc -l"
 alias show-hidden-files='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hide-hidden-files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias delete-DS-store-files="find . -name '.DS_Store' -type f -delete"
+alias uuid="openssl rand -hex 32"
 
 ## Navigation
 alias pp="pwd"
@@ -89,11 +90,11 @@ alias default_browser="chrome"
 alias ote="open -e" #open with text edit
 alias vs="code"
 alias c="code ."
+alias ci="code-insiders ."
+alias cr="code -r ."
+alias cir="code-insiders -r ."
 alias vi="vim"
 alias vimrc="vi ~/.vimrc"
-alias ci="code-insiders ."
-alias cir="code-insiders -r ."
-alias cr="code -r ."
 
 ## Alfred
 alias alfred-preferences="cd '/Users/$USER/Library/Application Support/Alfred 3/Alfred.alfredpreferences/'"
@@ -102,13 +103,13 @@ alias alfred-thumbnails-location="alfred-preferences && cd resources"
 alias alfred-copy-links="alfred-links-location && cat prefs.plist | pbcopy"
 
 ## Browser
-alias react="$default_browser https://reactjs.org/docs/getting-started.html"
-alias sand="$default_browser https://codesandbox.io/s/new"
+alias react="default_browser https://reactjs.org/docs/getting-started.html"
+alias sand="default_browser https://codesandbox.io/s/new"
 
 ## Github
-alias ghb="$default_browser https://github.com/eowino"
+alias ghb="default_browser https://github.com/eowino"
 alias github="ghb"
-alias ghbr="$default_browser https://github.com/eowino?tab=repositories"
+alias ghbr="default_browser https://github.com/eowino?tab=repositories"
 
 ## Git
 alias git="hub"
@@ -122,9 +123,8 @@ alias gfp="git fetch && git pull"
 alias gda="git add *"
 alias gcm="git commit"
 alias gcmm="git commit -m "
-alias gcmmd="git commit --no-edit" # default merge conflict message
-alias git-commit-no-edit="gcmmd"
-alias gmu="git commit --amend" # amend previous commit message
+alias git-commit-no-edit="git commit --no-edit" # default merge conflict message
+alias git-copy-previous-message="git log -1 --pretty=format:%B | pbcopy"
 alias gits="git status"
 alias ghpages="git checkout -b gh-pages"
 alias gitb="git branch"
@@ -143,6 +143,7 @@ alias whichbranch="git branch --contains" # find branches a commit is on
 alias master="git checkout master"
 alias main="git checkout main"
 alias develop="git checkout develop"
+alias staging="git checkout staging"
 alias relb="git checkout release-branch"
 alias ghpush="ghpages && gpog"
 alias ghp="git checkout gh-pages"
@@ -194,6 +195,7 @@ alias link-start="npm link && npm start"
 alias npm-list-linked-projects="npm ls -g --depth=0 --link=true"
 alias serve="http-server -g -c-1 --cors"
 alias flush-npm-and-package-lock="trash node_modules && rm package-lock.json && ni && say NPM is done"
+alias nuke-npmrc="echo '' > .npmrc"
 
 ## Node scripts
 alias ns="npm start"
@@ -206,6 +208,7 @@ alias nde="node --inspect-brk"
 alias nbrk="nde"
 alias rr="corre"
 alias pkg="pkg-version"
+alias cy="npm run cy:open"
 
 ## NVM
 alias nvmd="nvm use default"

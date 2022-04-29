@@ -22,6 +22,14 @@ find-folder() {
     fi
 }
 
+search-for-string-in-current-folder() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : search-for-string-in-current-folder <string-here>"
+    else
+        grep -R "$1" .
+    fi
+}
+
 find-process-in-port() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : find-process-in-port <port-number>"
