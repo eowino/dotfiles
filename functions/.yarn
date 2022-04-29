@@ -1,7 +1,0 @@
-yarn-save-exact() {
-    if [ $# -eq 0 ]; then
-        echo "Usage e.g. : yarn-save-exact <package name> <version without @ symbol> i.e. yarn-save-exact react 16.8.6"
-    else
-        yarn add "$1@$2" --exact
-    fi
-}
