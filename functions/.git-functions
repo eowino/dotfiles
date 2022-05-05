@@ -175,3 +175,14 @@ git-show-remote-branch() {
     local currentBranch="$(git branch | grep \* | cut -d ' ' -f2 | tr -d '[:space:]')"
     git remote show origin | grep "$currentBranch"
 }
+
+pulls() {
+    node -p "
+        const execSync = require('child_process').execSync;
+        const [remote] = execSync('git remote -v').toString().split('\n');
+        const [, repo] = /:(.*)(?=.git)/g.exec(remote);
+        const url = 'https://github.com/' + repo + '/pulls';
+        execSync('open ' + url);
+        console.log(url);
+    "
+}
