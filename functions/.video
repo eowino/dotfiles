@@ -30,6 +30,14 @@ ffprobe-frames() {
     fi
 }
 
+ffprobe-frames-composition() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-frames-composition <path-to-video>"
+    else
+        ffprobe -print_format json -show_frames "$1";
+    fi
+}
+
 ffprobe-continuous-pts() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : ffprobe-keyframes <path-to-video> (confirm cont"
