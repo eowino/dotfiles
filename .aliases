@@ -77,6 +77,7 @@ alias dotpi="vi ~/Documents/Projects/dotfiles/.projects"
 alias dotf="less ~/Documents/Projects/dotfiles/.functions"
 alias dotfi="vi ~/Documents/Projects/dotfiles/.functions"
 alias dotv="dot && vs ."
+alias dotfiles-open-vscode="dot && vs ."
 alias init="source ~/.zshrc"
 alias dit="source ~/.zshrc"
 
@@ -191,6 +192,7 @@ alias hs="chrome http://127.0.0.1:8080 && http-server"
 alias lpkg="less package.json"
 alias npm-update="npx npm-check -u"
 alias clear-node-modules="trash node_modules"
+alias nuke-node-modules="trash node_modules"
 alias flush-npm="trash node_modules && npm i && say NPM is done"
 alias link-start="npm link && npm start"
 alias npm-list-linked-projects="npm ls -g --depth=0 --link=true"
@@ -213,21 +215,12 @@ alias cy="npm run cy:open"
 
 ## NVM
 alias nvmd="nvm use default"
-
-## Yarn
-alias ya="yarn add"
-alias yr="yarn remove"
-alias yi="yarn install"
+alias nn="nvm use"
 
 ## Ruby Sass
 alias sass-watch="sass --watch main.scss:main.css"
 alias swa="sass --watch ." #sass watch all
 alias compress="sass --style compressed main.scss:main.css"
-
-## Heroku
-alias hul="heroku local"
-alias poku="git push heroku master"
-alias hlogs="heroku logs"
 
 ## AWS CLI
 alias awscli-list-profiles="aws configure list-profiles"
