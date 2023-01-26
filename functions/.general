@@ -78,3 +78,11 @@ ngrok() {
         ~/ngrok http $1
     fi
 }
+
+unzip-gz-files() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : unzip-gz-files <file-name(s)>"
+    else
+        gunzip $1
+    fi
+}

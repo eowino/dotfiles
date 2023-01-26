@@ -1,3 +1,12 @@
+ffmpeg-hls-mp4() {
+    # For single audio HLS
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffmpeg-hls-mp4 <HLS_URL> <OUTPUT_FILE_NAME>"
+    else
+        ffmpeg -i $1 "$2".mp4
+    fi
+}
+
 ffprobe-framerate() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : ffprobe-framerate <path-to-video>"
