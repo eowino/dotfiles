@@ -16,8 +16,9 @@ delete-branches-remote() {
 }
 
 delete-current-branch() {
-    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
-    master;
+    local defaultBranch="$(git-get-default-branch)"
+    local branchName="$(git branch | grep \* | cut -d ' ' -f2)"
+    gco $defaultBranch
     gdel $branchName
 }
 
@@ -32,6 +33,10 @@ delete-remote-branch() {
     else
         delete_this_remote_branch "$1"
     fi
+}
+
+git-get-default-branch() {
+    git remote show origin | sed -n '/HEAD branch/s/.*: //p'
 }
 
 gco-git-tag() {
