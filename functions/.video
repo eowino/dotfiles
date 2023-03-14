@@ -70,3 +70,11 @@ ffmpeg-extract-captions() {
         ffmpeg -f lavfi -i "movie=$1[out+subcc]"  -map 0:1  $1.vtt
     fi
 }
+
+ffmpeg-mov-to-gif() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffmpeg-mov-to-gif <file name>"
+    else
+        ffmpeg -i "$1.mov" -vf "scale=1080:-1,fps=30" "$1.gif"
+    fi
+}
