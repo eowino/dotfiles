@@ -126,6 +126,7 @@ alias gda="git add *"
 alias gcm="git commit"
 alias gcmm="git commit -m "
 alias git-commit-no-edit="git commit --no-edit" # default merge conflict message
+alias git-commit-amend-no-edit="git commit --amend --no-edit" # Amend previous commit
 alias git-copy-previous-message="git log -1 --pretty=format:%B | pbcopy"
 alias gits="git status"
 alias ghpages="git checkout -b gh-pages"
