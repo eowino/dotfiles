@@ -14,11 +14,13 @@ curl -o- https://raw.gcp ithubusercontent.com/creationix/nvm/v0.34.0/install.sh 
 nvm install --lts
 nvm alias default --lts
 
-# Install vim-plug
+# Install vim-plug (Vim plugin manager)
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Configure vim colours
 mkdir -p ~/.vim/colors
-curl -O https://raw.githubusercontent.com/flazz/vim-colorschemes/master/colors/cobalt2.vim
-mv cobalt2.vim ~/.vim/colors
+# curl -O https://raw.githubusercontent.com/flazz/vim-colorschemes/master/colors/cobalt2.vim
+# mv cobalt2.vim ~/.vim/colors
+curl -O https://raw.githubusercontent.com/catppuccin/vim/main/colors/catppuccin_mocha.vim
+mv catppuccin_mocha.vim ~/.vim/colors

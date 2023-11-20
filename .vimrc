@@ -20,8 +20,7 @@ set ignorecase " Ignore case when searching.
 set smartcase " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 
 " UI Options
-colorscheme cobalt2 " Change color scheme
-" colorscheme night-owl
+colorscheme catppuccin_mocha "Change color scheme
 set laststatus=2 " Always display the status bar.
 set ruler " Always show cursor position.
 set cursorline " Highlight the line currently under cursor.
