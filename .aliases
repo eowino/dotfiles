@@ -51,6 +51,8 @@ alias show-hidden-files='defaults write com.apple.finder AppleShowAllFiles YES; 
 alias hide-hidden-files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias delete-DS-store-files="find . -name '.DS_Store' -type f -delete"
 alias uuid="openssl rand -hex 32"
+alias ip="curl https://api.ipify.org/\?format\=json"
+alias public-ip="ip"
 
 ## Navigation
 alias pp="pwd"
