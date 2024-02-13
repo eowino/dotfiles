@@ -7,6 +7,15 @@ ffmpeg-hls-mp4() {
     fi
 }
 
+ffmpeg-play-stream() {
+    # For single audio HLS
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffmpeg-play-stream <FILENAME>"
+    else
+        ffmpeg -loglevel trace -i $1
+    fi
+}
+
 ffprobe-framerate() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : ffprobe-framerate <path-to-video>"
