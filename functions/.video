@@ -32,6 +32,14 @@ ffprobe-info() {
     fi
 }
 
+ffprobe-kfi() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-kfi <path-to-video>"
+    else
+        ffprobe -loglevel error -select_streams v:0 -show_entries packet=pts_time,flags -of csv=print_section=0 "$1";
+    fi
+}
+
 ffprobe-audio-info() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : ffprobe-audio-info <path-to-audio>"
