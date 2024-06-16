@@ -128,3 +128,6 @@ export REACT_EDITOR=code-insiders
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+# Fixes gpg failed to sign the data
+export GPG_TTY=$(tty)
