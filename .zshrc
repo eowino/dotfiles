@@ -2,11 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/evansowino/.oh-my-zsh
+# export ZSH=/Users/evansowino/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+# https://github.com/caiogondim/bullet-train.zsh?tab=readme-ov-file
 ZSH_THEME="bullet-train"
 
 # my bullet-train config
@@ -17,6 +20,8 @@ BULLETTRAIN_PROMPT_ORDER=(
   dir
   nvm
 )
+
+BULLETTRAIN_NVM_BG=#365E32
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
