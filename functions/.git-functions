@@ -159,34 +159,6 @@ git-amend-previous-message() {
     fi 
 }
 
-gitpr() {
-    # e.g. https://github.com/eowino/dotfiles/compare/feature-branch
-    local remote="https://github.com"
-    local branchName="$(git branch | grep \* | cut -d ' ' -f2)";
-    local repoName="$(basename $(git remote get-url origin) .git)"
-    local owner="$(git config --get remote.origin.url | tr ":" " " | cut -d ' ' -f2 | tr "/" " " | cut -d ' ' -f1)"
-    open "$remote/$owner/$repoName/compare/$branchName"
-}
-
-# pulls() {
-#     node -p "
-#         const execSync = require('child_process').execSync;
-#         const [remote] = execSync('git remote -v').toString().split('\n');
-#         const [, repo] = /:(.*)(?=.git)/g.exec(remote);
-#         const url = 'https://github.com/' + repo + '/pulls';
-#         execSync('open ' + url);
-#         console.log(url);
-#     "
-# }
-
-pulls() {
-    # e.g. https://github.com/eowino/dotfiles/pulls
-    local remote="https://github.com"
-    local repoName="$(basename $(git remote get-url origin) .git)"
-    local owner="$(git config --get remote.origin.url | tr ":" " " | cut -d ' ' -f2 | tr "/" " " | cut -d ' ' -f1)"
-    open "$remote/$owner/$repoName/pulls"
-}
-
 actions() {
     # e.g. https://github.com/eowino/dotfiles/pulls
     local remote="https://github.com"
