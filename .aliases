@@ -183,6 +183,7 @@ alias gbe="git browse"
 alias git-stash-clear-all="git stash clear"
 alias git-stash-delete-id="git stash drop" # git-stash-delete-id 1
 alias git-stop-tracking-remote-branch="git branch --unset-upstream"
+alias my-pulls="gh pr list --author @me --web"
 
 ## Node
 alias npmg="npm ls -g --depth 0" #List all npm modules installed globally
