@@ -25,6 +25,10 @@ save-exact() {
     fi
 }
 
+function to-date() {
+    node -p "console.log(new Date($1 * 1000).toLocaleString())"
+}
+
 function node-dir-error() {
     echo "package.json not found in $PWD"
 }
