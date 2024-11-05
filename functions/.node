@@ -26,7 +26,11 @@ save-exact() {
 }
 
 function to-date() {
-    node -p "console.log(new Date($1 * 1000).toLocaleString())"
+    node -p "console.log(new Date($1 * 1000).toISOString())"
+}
+
+function to-date-w() {
+    node -p "console.log(new Date($1).toISOString())"
 }
 
 function node-dir-error() {

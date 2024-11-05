@@ -95,3 +95,19 @@ ffmpeg-mov-to-gif() {
         ffmpeg -i "$1.mov" -vf "scale=1080:-1,fps=30" "$1.gif"
     fi
 }
+
+ytl() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ytl <youtube url>"
+    else 
+        yt-dlp $1
+    fi
+}
+
+ytl-audio() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ytl-audio <youtube url>"
+    else 
+        yt-dlp -x --audio-format mp3 $1
+    fi
+}

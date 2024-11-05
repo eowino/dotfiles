@@ -68,8 +68,6 @@ alias down="cd ~/Downloads"
 alias pro="cd ~/Documents/Projects"
 alias prol="pro && ll"
 alias desk="cd ~/Desktop"
-alias yt="down && cd CodeVideos/Youtube"
-alias ytl="yt && youtube-dl"
 
 ## Dotfiles
 alias dot="cd ~/Documents/Projects/dotfiles"
