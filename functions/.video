@@ -48,6 +48,22 @@ ffprobe-audio-info() {
     fi
 }
 
+ffprobe-view-audio-lang-and-title() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-view-audio-lang-and-title <path-to-file>"
+    else
+        ffprobe -v error -select_streams a -show_entries stream=index:stream_tags=language,title -of default=noprint_wrappers=1 "$1";
+    fi
+}
+
+ffprobe-all-info() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-all-info <path-to-file>"
+    else
+        ffprobe -v error -show_streams -print_format json "$1";
+    fi
+}
+
 ffprobe-frames() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : ffprobe-frames <path-to-video>"
