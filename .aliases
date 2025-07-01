@@ -53,6 +53,8 @@ alias delete-DS-store-files="find . -name '.DS_Store' -type f -delete"
 alias uuid="openssl rand -hex 32"
 alias ip="curl https://api.ipify.org/\?format\=json"
 alias public-ip="ip"
+alias ip-private="ifconfig | grep \"inet \" | grep -v 127.0.0.1 | awk '{print \$2}'"
+alias private-ip="ip-private"
 
 ## Navigation
 alias pp="pwd"
