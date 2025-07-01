@@ -25,6 +25,14 @@ save-exact() {
     fi
 }
 
+function to-date() {
+    node -p "console.log(new Date($1 * 1000).toISOString())"
+}
+
+function to-date-w() {
+    node -p "console.log(new Date($1).toISOString())"
+}
+
 function node-dir-error() {
     echo "package.json not found in $PWD"
 }

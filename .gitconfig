@@ -3,6 +3,7 @@
 [user]
 	email = 9787512+eowino@users.noreply.github.com
 	name = Evans Owino
+	signingkey = 0ED675488B0D216A
 [interactive]
     diffFilter = delta --color-only
 [color]
@@ -13,3 +14,7 @@
 	autoSetupRemote = true
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2

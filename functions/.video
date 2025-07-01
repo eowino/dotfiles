@@ -48,6 +48,22 @@ ffprobe-audio-info() {
     fi
 }
 
+ffprobe-view-audio-lang-and-title() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-view-audio-lang-and-title <path-to-file>"
+    else
+        ffprobe -v error -select_streams a -show_entries stream=index:stream_tags=language,title -of default=noprint_wrappers=1 "$1";
+    fi
+}
+
+ffprobe-all-info() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ffprobe-all-info <path-to-file>"
+    else
+        ffprobe -v error -show_streams -print_format json "$1";
+    fi
+}
+
 ffprobe-frames() {
     if [ $# -eq 0 ]; then
         echo "Usage e.g. : ffprobe-frames <path-to-video>"
@@ -93,5 +109,21 @@ ffmpeg-mov-to-gif() {
         echo "Usage e.g. : ffmpeg-mov-to-gif <file name>"
     else
         ffmpeg -i "$1.mov" -vf "scale=1080:-1,fps=30" "$1.gif"
+    fi
+}
+
+ytl() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ytl <youtube url>"
+    else 
+        yt-dlp $1
+    fi
+}
+
+ytl-audio() {
+    if [ $# -eq 0 ]; then
+        echo "Usage e.g. : ytl-audio <youtube url>"
+    else 
+        yt-dlp -x --audio-format mp3 $1
     fi
 }

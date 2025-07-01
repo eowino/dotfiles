@@ -2,7 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# export ZSH=/Users/evansowino/.oh-my-zsh
 export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -16,7 +15,6 @@ ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_CHAR="£"
 BULLETTRAIN_PROMPT_ORDER=(
   time
-  git
   dir
   nvm
 )
@@ -43,7 +41,7 @@ BULLETTRAIN_NVM_BG=#365E32
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -65,7 +63,7 @@ BULLETTRAIN_NVM_BG=#365E32
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-prompt)
 
 source $ZSH/oh-my-zsh.sh
 

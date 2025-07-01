@@ -38,3 +38,6 @@ set mouse=a " Enable use of the mouse for all modes
 if (has("termguicolors"))
  set termguicolors
 endif
+
+" Add clipboard support to Vim
+set clipboard=unnamedplus

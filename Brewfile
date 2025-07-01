@@ -23,4 +23,4 @@ brew "tree"
 # Watch files and take action when they change (used by React Native CLI)
 brew "watchman"
 # Download YouTube videos from the command-line
-brew "youtube-dl"
+brew "yt-dlp"
